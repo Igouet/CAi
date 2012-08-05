@@ -1,0 +1,181 @@
+.lateral{float: left; width:300px; margin-left: 30px}
+
+#actividades {
+  margin-bottom: 40px;
+  width: 250px;
+  background:white;
+  color:gray;
+}
+
+#actividades .Ym
+{
+  -webkit-transition: color.218s;
+  color: gray;
+  border-bottom: 1px solid #E9E9E9;
+  font-width: bold;
+  font-size: 11px;
+  margin-bottom: 10px;
+  margin-top:-7px;
+  position:relative;
+  text-align:right;
+}
+
+#actividades .titulo
+{
+  display:inline-block;
+  font-width:bold;
+  font-size:11px;
+  margin:0;
+  max-width: 280px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+  white-space: nowrap;
+  padding-left: 10px;
+  position: relative;
+  background-color: white;
+  bottom: -7px;
+}
+
+#actividades .Xm
+{
+  margin-top:-10px;
+  min-height:28px;
+  padding: 0;
+  color:black;
+  font-size: 13px;
+}
+
+#actividades .dia .fecha
+{
+  border-bottom: solid 1px #ddd;
+  margin-bottom:10px;
+}
+
+#actividades .dia .fecha .nombre
+{
+  text-transform: uppercase;
+  color:#333;
+  font-size:10px;
+}
+
+
+
+#actividades .dia .fecha .numero
+{
+  color:black;
+  color:#333;
+}
+
+#actividades .Xm .dia .actividades .actividad .tipo
+{
+  height:20px;
+  width:20px;
+  background-color: #91addd;
+  float:left;
+  overflow:hidden;
+  margin-right:5px;
+}
+
+#actividades .Xm .dia .actividades .actividad p
+{
+  text-align: right;
+  margin: 0;
+}
+
+
+
+#actividades .Xm .dia .actividades .actividad .lugar
+{
+  color: gray;
+  font-size:11px;
+}
+
+#actividades .Xm .dia .actividades .actividad .hora
+{
+  color:gray;
+  font-size:11px;
+  margin-left: 5px;
+}
+
+#actividades .Xm .dia .actividades .actividad .title a
+{
+  color:black;
+}
+
+#actividades .Xm .dia .actividades .actividad .lugar a
+{
+  color:gray;
+}
+
+#favoritos{ background:white; margin:0; padding:0;width:250px; flo3at:left;}
+#favoritos img {margin-right:-4px; padding:0; height:83px; }
+
+#popular{  margin-bottom: 20px;
+  width: 250px;
+  background:white;
+  color:gray;}
+
+#popular .Ym
+{
+  -webkit-transition: color.218s;
+  color: gray;
+  border-bottom: 1px solid #E9E9E9;
+  font-width: bold;
+  font-size: 11px;
+  margin-bottom: 10px;
+  margin-top:-7px;
+  position:relative;
+  text-align:right;
+}
+
+#popular .titulo
+{
+  display:inline-block;
+  font-width:bold;
+  font-size:11px;
+  margin:0;
+  max-width: 280px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+  white-space: nowrap;
+  padding-left: 10px;
+  position: relative;
+  background-color: white;
+  bottom: -7px;
+}
+
+#popular .Xm
+{
+  margin-top:0;
+  min-height:28px;
+  padding: 0;
+  color:black;
+}
+
+#popular .Xm .elemento{
+  margin-bottom: 10px;
+}
+
+#popular .Xm .elemento p{
+  margin:0;
+  text-align:right;
+}
+#popular .Xm .elemento .cantidad
+{
+  font-size:11px;
+  color:gray;
+}
+
+#popular .Xm .elemento .title{
+  margin-bottom: 5px;
+}
+
+#popular .Xm .elemento .title a{
+  color:black;
+}
+
+#popular .Xm .elemento .title a:visited{
+  color: #333;
+}

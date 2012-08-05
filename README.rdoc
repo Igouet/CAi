@@ -1,0 +1,4 @@
+== Bienvenido a la aplicación principal del sitio del Centro de Alumnos de Ingeniería UC
+
+Para hacer uso de la aplicación es necesario primero configurar la base de datos en el archivos /config/database.yml.
+En la misma carpeta se puede encontrar un archivo de ejemplo para la configuración de una base de datos postgresql.

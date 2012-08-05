@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  titulo: MyString
+  contenido: MyText
+  emisor_id: 1
+  ingeniero_id: 1
+  leido: false
+
+two:
+  titulo: MyString
+  contenido: MyText
+  emisor_id: 1
+  ingeniero_id: 1
+  leido: false

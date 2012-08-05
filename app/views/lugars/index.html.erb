@@ -1,0 +1,32 @@
+<div class="contenido">
+  <div class="izquierda">
+    <h1>Listing lugars</h1>
+
+    <table>
+      <tr>
+        <th>Nombre</th>
+        <th>X</th>
+        <th>Y</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+
+      <% @lugars.each do |lugar| %>
+          <tr>
+            <td><%= lugar.nombre %></td>
+            <td><%= lugar.x %></td>
+            <td><%= lugar.y %></td>
+            <td><%= link_to 'Show', lugar %></td>
+            <td><%= link_to 'Edit', edit_lugar_path(lugar) %></td>
+            <td><%= link_to 'Destroy', lugar, :confirm => 'Are you sure?', :method => :delete %></td>
+          </tr>
+      <% end %>
+    </table>
+
+    <br/>
+
+    <%= link_to 'New Lugar', new_lugar_path %>
+
+  </div>
+</div>

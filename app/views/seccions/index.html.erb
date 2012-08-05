@@ -1,0 +1,29 @@
+<div class="contenido">
+  <div class="izquierda">
+    <h1>Lista de secciones</h1>
+
+    <table>
+      <tr>
+        <th>Identificador</th>
+        <th>Nombre</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+
+      <% @secciones.each do |seccion| %>
+          <tr>
+            <td><%= seccion.id %></td>
+            <td><%= seccion.name %></td>
+            <td><%= link_to 'Ver', seccion %></td>
+            <td><%= link_to 'Editar', edit_seccion_path(seccion) %></td>
+            <td><%= link_to 'Eliminar', seccion, :confirm => '¿Estás seguro?', :method => :delete %></td>
+          </tr>
+      <% end %>
+    </table>
+
+    <br/>
+
+    <%= link_to 'Nueva sección', new_seccion_path %>
+  </div>
+</div>

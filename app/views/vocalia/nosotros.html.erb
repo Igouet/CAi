@@ -1,0 +1,24 @@
+<div class = "contenido">	
+	<%= render 'layouts/error_flash'%>
+	
+	<div class = "fichas">
+			<div class = "principal">
+				<%= image_tag "/assets/vocalias/logo_principal#{@vocalia.id}.png" %>
+				<p><%= @vocalia.contenido %></p>
+			</div>
+			<div class="secundario">
+				<div class = "entrada">
+					<h3>Objetivo</h3>
+					<p><%= @vocalia.resumen %></p>
+				</div>
+				<div class = "entrada">
+					<h3>Logros</h3>
+					<p><%= @vocalia.resumen %></p>
+				</div>
+				<div class = "entrada">
+					<h3>Integrantes</h3>
+					<p><%= @vocalia.resumen %></p>
+				</div>
+			</div>
+		</div>
+</div>

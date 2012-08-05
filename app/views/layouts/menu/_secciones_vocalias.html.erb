@@ -1,0 +1,6 @@
+<ul>
+  <% @vocalias.each do |vocalia| %>
+      <li><%= link_to vocalia.nombre, "/vocalia/#{vocalia.id}/nosotros" %></li>
+  <% end %>
+
+</ul>

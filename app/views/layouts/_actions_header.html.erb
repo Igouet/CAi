@@ -1,0 +1,11 @@
+
+<div class = "acciones">
+	<ol>
+		<% if current_ingeniero.permiso > 50%>
+			<li><%= link_to "Intranet", '/intranet/inicio' %></li>
+		<% end %>
+		<li><%= link_to "Mi perfil", current_ingeniero %></li>
+		<li><%= link_to "Desconectar", signout_path, :method => :delete %> </li>
+	</ol>
+</div>
+

@@ -1,0 +1,33 @@
+<header>
+
+  <div class="logo">
+    <div class="imagen">
+      <% logo = image_tag("logo_header_2.png", :alt => "Centro de Alumnos de Ingeniería") %>
+      <%= link_to logo, root_path %>
+
+    </div>
+
+
+  </div>
+
+  <% if !signed_in? %>
+      <div class="sesion">
+        <div class="messagepop pop">
+          <%= form_for(:session, :url => sessions_path) do |f| %>
+
+              <%= f.text_field :email %>
+
+              <%= f.password_field :password %>
+              <%= f.check_box "Recordarme" %>
+              <span id="recordar">Recordarme</span>
+              <%= f.submit "Entrar", :class => 'boton_entrar' %>
+
+          <% end %>
+        </div>
+
+        <a href="#" id="contact">Iniciar sesión</a>
+      </div>
+
+  <% end %>
+
+</header>

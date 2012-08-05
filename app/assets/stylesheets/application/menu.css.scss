@@ -1,0 +1,61 @@
+/*Menus del cuerpo*/
+
+.menu {height:70px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#F7D34C), to(#EBC848));
+  margin-bottom: 25px;
+  border-bottom: solid 1px #FFE377;
+  border-top: solid 1px #FFE377;
+}
+
+#actual {float:left; height:70px; padding-top:0px; width:220px; text-align:center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#DB8B00), to(#CB8100));
+  text-shadow: 0px 1px 6px #935D00;
+  margin-left: 80px;
+  box-shadow: 0px 0px 4px #935d00;
+}
+#actual span {font-size:50px; color:white;}
+
+#menus {float:left; margin-left: 10px}
+#sub_menu_header {  height:20px;   margin-left:3em; margin-top: -5px}
+#sub_menu_header a { border-color: #595959;}
+#sub_menu_header ul { list-style-type: none; text-transform: uppercase; text-align: center; padding-left: 0px; }
+#sub_menu_header li { float:left; }
+#sub_menu_header ul li a { display: block; text-decoration: none; height: 22px; color: #CA8100; margin-top: -8px; padding: 8px 1.5em 0 1.5em; font-size: 10px; text-shadow: 0px 1px 0px #ffda4f;}
+#sub_menu_header ul li a:hover { text-decoration: underline; }
+
+#menu_header { height:20px; padding: 0; width:925px;}
+#menu_header ul { list-style-type: none; text-transform: uppercase; text-align: center; font-size: 15px; padding-left: 0px; }
+#menu_header li { float:left; }
+#menu_header ul li a { display: block; text-decoration: none; height: 22px; color: #844E00; margin-top: 0; padding: 0 1em 0 1em; font-size: 18px; border-right: 1px solid #E1C045; text-shadow: 0px 1px 0px #FFE279; }
+#menu_header ul li a:hover {text-decoration: underline}
+.divisor {background:#fff363; height:4px; width:260px; position:relative; left:-380px; top:90px; overflow:hidden; margin-top:10px; margin-left:80px;}
+
+#menu_header #fb{
+  margin:-5px -20px 0 0px;
+  border-right:none;
+  float:right;
+}
+
+#menu_header #tt img{
+  height:50px;
+}
+
+#menu_header #fb img{
+  height:50px;
+}
+
+#menu_header #fb a{
+  border-right:none;
+
+}
+
+#menu_header #tt{
+  margin:-6px 0 0 0;
+  float:right;
+  border-right:none;
+}
+
+#menu_header #tt a{
+  border-right:none;
+
+}

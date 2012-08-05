@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  local_id: 1
+  visita_id: 1
+  fecha: 2012-05-10 01:38:54
+
+two:
+  local_id: 1
+  visita_id: 1
+  fecha: 2012-05-10 01:38:54

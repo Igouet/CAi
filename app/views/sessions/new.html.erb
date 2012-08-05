@@ -1,0 +1,25 @@
+<% flash.each do |key, value| %>
+<div class = "bloque_invs">
+<div class = "flash <%= key %>"><%= value %></div>
+</div>
+<% end %>
+
+<div>
+<h1>Ingresar</h1>
+<%= form_for(:session, :url => sessions_path) do |f|%>
+	<div class = "field">
+		<%= f.label :email %><br />
+		<%= f.text_field  :email %>
+	</div>
+	<div class = "field">
+		<%= f.label :password %><br />
+		<%= f.password_field :password %>
+	</div>
+	<div class = "actions">
+		<%= f.submit "Sign in"%>
+	</div>
+<% end %>
+
+<p> No tienes una cuenta? <%= link_to "Regístrate!", signup_path %> </p>
+
+</div>

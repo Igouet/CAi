@@ -1,0 +1,6 @@
+<ul>
+	<% if signed_in? && current_ingeniero.permiso == 100 %>
+		<li><%= link_to "Nueva noticia", '/posts/new'%></li>
+	<% end %>
+
+</ul>

@@ -1,0 +1,15 @@
+<div class="contenido">
+  <div class="noticias">
+
+      <% @noticias.each do |noticia| %>
+          <div class="noticia">
+       <% img = image_tag noticia.avatar.url(:normal) %>
+          <%= link_to img, noticia %>
+          <%= link_to noticia.titulo, noticia %>
+          <p><%= noticia.resumen %></p>
+          <span class="publicado">Hace <%= time_ago_in_words(noticia.created_at) %></span>
+           </div>
+          <% end %>
+
+  </div>
+</div>

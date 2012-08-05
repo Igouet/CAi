@@ -1,0 +1,14 @@
+<div class="contenido">
+  <div class="izquierda">
+    <p id="notice"><%= notice %></p>
+
+    <p>
+      <%= @lugar.nombre %>
+    </p>
+
+    <img src=<%= "http://maps.google.com/maps/api/staticmap?center=#{@lugar.x},#{@lugar.y}&zoom=18&size=650x450&maptype=hybrid&markers=color:blue%7Clabel:S%7C#{@lugar.x},#{@lugar.y}&sensor=false" %>>
+
+
+
+  </div>
+</div>

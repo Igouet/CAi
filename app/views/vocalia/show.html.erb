@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nombre:</b>
+  <%= @vocalium.nombre %>
+</p>
+
+<p>
+  <b>Resumen:</b>
+  <%= @vocalium.resumen %>
+</p>
+
+<p>
+  <b>Contenido:</b>
+  <%= @vocalium.contenido %>
+</p>
+
+<p>
+  <b>Seccion:</b>
+  <%= @vocalium.seccion_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_vocalium_path(@vocalium) %> |
+<%= link_to 'Back', vocalia_path %>

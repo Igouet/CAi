@@ -1,0 +1,118 @@
+footer
+{
+	text-align: center;
+	background: white;
+	width: 1210px;
+	display:block;
+	padding: 10px;
+	color:#333;
+	font-size:13px;
+}
+footer .contenido a
+{
+	color:#333;
+}
+
+footer h4
+{
+	margin:0;
+}
+
+
+
+footer .sponsors
+{
+	overflow:hidden;
+	border-bottom: 1px solid #ddd;
+	height: 80px;
+}
+
+footer .sponsors ul
+{
+	position:relative;
+	list-style: none;
+	float:left;
+	
+}
+
+footer .sponsors ul li
+{
+	position:relative;
+	margin-left: 2em;
+	float:left;
+	
+}
+
+footer .contenido
+{
+	overflow: hidden;
+	border-bottom: 1px solid #eee;
+	border-top: 1px solid #eee;
+	height:180px;
+}
+
+footer .contenido .cleft
+{
+	display: block;
+	float:left;
+	width: 1000px;
+	border-right: 1px solid #eee;
+	margin: 10px 0 10px 0;
+}
+
+footer .contenido .cright
+{
+	display:block;
+	float:left;
+	width:400px;
+	margin: 10px 0 10px 0;
+
+}
+
+footer .contenido .organizador
+{
+	overflow:hidden;
+	background: url('/assets/logoCAi.png');
+	height:160px;
+	margin-top:10px;
+	
+
+}
+
+footer .contenido .organizador img
+{
+	float: none;
+	padding-top: 10px;
+}
+
+footer .contenido .lista
+{
+	overflow:hidden;
+	text-align:left;
+	height: 150px;
+}
+
+footer .contenido .cleft .lista .cleft
+{
+	float:left;
+	width: 160px;
+	padding: 0.5em 3em 0 10em;
+}
+
+footer .contenido .cleft .lista .cright
+{
+
+	padding: 1.3em 1em 2em 9em;
+	float:left;
+	width: 400px;
+}
+
+footer .contenido .lista .cright .col
+{
+	float: left;
+}
+
+footer .contenido .cleft .lista ul
+{
+	list-style: none;
+}

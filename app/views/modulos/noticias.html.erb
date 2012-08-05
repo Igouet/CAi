@@ -1,0 +1,29 @@
+<div class = "contenido">	
+	<%= render 'layouts/error_flash'%>
+	
+	<div class = "noticias">
+			<div class = "destacado">
+				<%= image_tag @noticias[0].avatar.url(:destacado) %>
+				<%= link_to @noticias[0].titulo, @noticias[0] %>
+				<p><%= @noticias[0].resumen %></p>
+			</div>
+			<div class="secundario">
+				<div class = "noticia">
+					<%= image_tag @noticias[1].avatar.url(:normal) %>
+					<%= link_to @noticias[1].titulo, @noticias[1] %>
+					<p><%= @noticias[1].resumen %></p>
+				</div>
+				<div class = "noticia">
+					<%= image_tag @noticias[2].avatar.url(:normal) %>
+					<%= link_to @noticias[2].titulo, @noticias[2] %>
+					<p><%= @noticias[2].resumen %></p>
+				</div>
+				<div class = "noticia">
+					<%= image_tag @noticias[3].avatar.url(:normal) %>
+					<%= link_to @noticias[3].titulo, @noticias[3] %>
+					<p><%= @noticias[3].resumen %></p>
+				</div>
+			</div>
+		</div>
+</div>
+

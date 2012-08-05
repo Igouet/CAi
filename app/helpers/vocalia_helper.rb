@@ -1,0 +1,2 @@
+module VocaliaHelper
+end

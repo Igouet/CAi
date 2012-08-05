@@ -1,0 +1,22 @@
+<div class="sidebar" id="popular">
+  <div class="Ym">
+    <h3 class="titulo"><span>Lo más comentado</span></h3>
+  </div>
+  <div class="Xm">
+    <% @populares.each do |p| %>
+        <div class="elemento">
+          <span class=title><%= link_to p.titulo, p %></span>
+          <% if p.cantidad_comentarios == 1 %>
+              <p>
+                <span class="cantidad"><%= p.cantidad_comentarios %> comentario</span>
+              </p>
+          <% else %>
+              <p>
+                <span class="cantidad"><%= p.cantidad_comentarios %> comentarios</span>
+              </p>
+          <% end %>
+        </div>
+    <% end %>
+  </div>
+
+</div>

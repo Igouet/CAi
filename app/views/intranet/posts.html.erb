@@ -1,0 +1,16 @@
+
+<div class = "contenido">
+	<div class = "izquierda">	
+		<table>
+			<% @publicaciones.each do |post| %>
+				<tr>
+					<td><%= post.titulo %></td>
+					<td><%= post.seccion_id %> </td>
+					<td><%= link_to 'Ver noticia', post%></td>
+					<td><%= link_to 'Editar', edit_post_path(post.id)%>
+				</tr>
+			<% end %>
+		</table>
+	</div>
+
+</div>

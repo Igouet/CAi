@@ -1,0 +1,21 @@
+<div class="contenido">
+  <div class="izquierda">
+    <h1>Nueva secci&oacute;n</h1>
+
+    <%= form_for @seccion, :html => {:multipart => true} do |f| %>
+
+        <%= render 'shared/error_messages', :object => f.object %>
+
+        <div class="field">
+          <%= f.label :name, "Nombre" %>
+          <br/>
+          <%= f.text_field :name %>
+        </div>
+        <div class="actions">
+          <%= f.submit "Crear" %>
+        </div>
+
+    <% end %>
+  </div>
+
+</div>
