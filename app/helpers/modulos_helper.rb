@@ -1,3 +1,4 @@
+# encoding: UTF-8
 module ModulosHelper
 
   def noticias_medios

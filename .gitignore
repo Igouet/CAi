@@ -59,3 +59,7 @@ database.yml
 Icon?
 ehthumbs.db
 Thumbs.db
+
+#Rubymine files?#
+
+.idea
