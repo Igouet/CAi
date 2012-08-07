@@ -1,38 +1,39 @@
-<div class = "contenido">	
-	<%= render 'layouts/error_flash'%>
-	
-	<div class = "noticias">
-			<div class = "destacado">
-				<% img =  image_tag @noticias[0].avatar.url(:destacado) %>
-              <%= link_to img, @noticias[0] %>
-				<%= link_to @noticias[0].titulo, @noticias[0] %>
-				<p><%= @noticias[0].resumen %></p>
-             <span class="publicado">Hace <%= time_ago_in_words(@noticias[0].created_at) %></span>
-			</div>
-			<div class="secundario">
-				<div class = "noticia">
-                  <% img =  image_tag @noticias[1].avatar.url(:normal) %>
-                  <%= link_to img, @noticias[1] %>
-					<%= link_to @noticias[1].titulo, @noticias[1] %>
-					<p><%= @noticias[1].resumen %></p>
-                  <span class="publicado">Hace <%= time_ago_in_words(@noticias[1].created_at) %></span>
-				</div>
-				<div class = "noticia">
-                  <% img =  image_tag @noticias[2].avatar.url(:normal) %>
-                  <%= link_to img, @noticias[2] %>
-					<%= link_to @noticias[2].titulo, @noticias[2] %>
-					<p><%= @noticias[2].resumen %></p>
-                  <span class="publicado">Hace <%= time_ago_in_words(@noticias[2].created_at) %></span>
-				</div>
-				<div class = "noticia">
-                  <% img =  image_tag @noticias[3].avatar.url(:normal) %>
-                  <%= link_to img, @noticias[3] %>
-					<%= link_to @noticias[3].titulo, @noticias[3] %>
-					<p><%= @noticias[3].resumen %></p>
-                  <span class="publicado">Hace <%= time_ago_in_words(@noticias[3].created_at) %></span>
-				</div>
-			</div>
-		</div>
+<div class="contenido">
+  <%= render 'layouts/error_flash' %>
+  <% if noticias.count == 4 %>
+      <div class="noticias">
+        <div class="destacado">
+          <% img = image_tag @noticias[0].avatar.url(:destacado) %>
+          <%= link_to img, @noticias[0] %>
+          <%= link_to @noticias[0].titulo, @noticias[0] %>
+          <p><%= @noticias[0].resumen %></p>
+          <span class="publicado">Hace <%= time_ago_in_words(@noticias[0].created_at) %></span>
+        </div>
+        <div class="secundario">
+          <div class="noticia">
+            <% img = image_tag @noticias[1].avatar.url(:normal) %>
+            <%= link_to img, @noticias[1] %>
+            <%= link_to @noticias[1].titulo, @noticias[1] %>
+            <p><%= @noticias[1].resumen %></p>
+            <span class="publicado">Hace <%= time_ago_in_words(@noticias[1].created_at) %></span>
+          </div>
+          <div class="noticia">
+            <% img = image_tag @noticias[2].avatar.url(:normal) %>
+            <%= link_to img, @noticias[2] %>
+            <%= link_to @noticias[2].titulo, @noticias[2] %>
+            <p><%= @noticias[2].resumen %></p>
+            <span class="publicado">Hace <%= time_ago_in_words(@noticias[2].created_at) %></span>
+          </div>
+          <div class="noticia">
+            <% img = image_tag @noticias[3].avatar.url(:normal) %>
+            <%= link_to img, @noticias[3] %>
+            <%= link_to @noticias[3].titulo, @noticias[3] %>
+            <p><%= @noticias[3].resumen %></p>
+            <span class="publicado">Hace <%= time_ago_in_words(@noticias[3].created_at) %></span>
+          </div>
+        </div>
+      </div>
+  <% end %>
 </div>
 
 
