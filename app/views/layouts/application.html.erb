@@ -4,7 +4,13 @@
   <title><%= title %></title>
   <%= csrf_meta_tag %>
 
-  <%= stylesheet_link_tag "application", :media => "all" %>
+
+  <% if mobile_device? %>
+      <%= stylesheet_link_tag 'mobile'%>
+  <%else%>
+      <%= stylesheet_link_tag "application", :media => "all" %>
+  <% end %>
+
 
   <%= javascript_include_tag "application" %>
 
@@ -12,7 +18,7 @@
   <link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
 </head>
 <body>
-<% # Carga el Javascript sdk de facebook para poder habilitar las funciones sociales   %>
+<% # Carga el Javascript sdk de facebook para poder habilitar las funciones sociales    %>
 
 <div id="fb-root"></div>
 <script>(function (d, s, id) {
@@ -30,39 +36,12 @@
 <% end %>
 
 <div class="container">
-  <%= render 'layouts/header' %>
-
+  <header>
+    <%= render 'layouts/header' %>
+    <%= render 'layouts/menu' %>
+  </header>
   <div class="cuerpo">
 
-    <div class="menu">
-
-      <div id="actual">
-        <span><%= @actual %></span>
-      </div>
-      <div id="menus">
-        <div id="menu_header">
-          <ul>
-            <% "Inicio,Noticias,Medios,Areas,Servicios,Portales".split(",").each do |modulo| %>
-                <% if modulo != @title %>
-                    <li> <%= link_to modulo, "/modulos/#{modulo.downcase}" %></li>
-                <% end %>
-            <% end %>
-            <% f = image_tag "fb.png" %>
-            <% tt = image_tag "tt.png" %>
-            <li id="tt"><%= link_to tt, "http://twitter.com/caipuc/" %></li>
-            <li id="fb"><%= link_to f, "http://www.facebook.com/groups/98863310124/" %></li>
-
-          </ul>
-        </div>
-        <% if @submenu %>
-            <div id="sub_menu_header">
-              <%= render "layouts/menu/secciones_#{@submenu.downcase}" %>
-            </div>
-        <% end %>
-
-      </div>
-
-    </div>
 
     <%= yield %>
 
