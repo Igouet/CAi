@@ -1,0 +1,27 @@
+<div class="menu">
+
+  <div id="menu_header">
+    <ul>
+      <% "Inicio,Web,Proyectos,Usuarios".split(",").each do |modulo|%>
+          <% if modulo == @title %>
+              <li class="actual"> <%= link_to modulo, "/intranet/#{modulo.downcase}" %></li>
+          <% else %>
+              <li> <%= link_to modulo, "/intranet/#{modulo.downcase}" %></li>
+          <% end %>
+      <% end %>
+      <% f = image_tag "fb.png" %>
+      <% tt = image_tag "tt.png" %>
+      <li id="tt"><%= link_to tt, "http://twitter.com/caipuc/" %></li>
+      <li id="fb"><%= link_to f, "http://www.facebook.com/groups/98863310124/" %></li>
+
+    </ul>
+  </div>
+
+  <div id="submenu_header">
+    <% if @submenu %>
+        <%= render "layouts/menu/intranet_#{@submenu.downcase}" %>
+    <% end %>
+  </div>
+
+
+</div>
