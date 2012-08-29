@@ -1,61 +1,56 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title><%= title %></title>
-		<%= csrf_meta_tag %>
+<head>
+  <title><%= title %></title>
+  <%= csrf_meta_tag %>
 
-		<%= stylesheet_link_tag    "application", :media => "all" %>
-		
-	    <%= javascript_include_tag "application" %>
-	
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
-	</head>
-	<body>
-		<% if signed_in? %>
-		<%= render 'layouts/actions_header'%>
-		<% end %>
-		
-		<div class = "container">
-			<%= render 'layouts/header'%>
-			
-			<div class = "cuerpo">
-				
-				<div class = "menu">
-					
-					<div id = "actual">
-						<span><%= @title %></span>
-					</div>
-					<div id="menus">
-					<div id = "menu_header">
-						<ul>
-								<% "Inicio,Web,Proyectos,Usuarios".split(",").each do |modulo|%>
-								<% if modulo != @title %>
-									<li> <%= link_to modulo, "/intranet/#{modulo.downcase}"%></li>
-								<% end %>
-								<% end %>
-							</ul>
-					</div>
-					
-					<div id = "sub_menu_header">
-						<%= render "layouts/menu/intranet_#{@title.downcase}"%>
+  <%= stylesheet_link_tag "application", :media => "all" %>
 
-					</div>
-					</div>
+  <%= javascript_include_tag "application" %>
 
-					</div>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<% # Carga el Javascript sdk de facebook para poder habilitar las funciones sociales    %>
 
-					<%= yield %>
-			</div>
+<div id="fb-root"></div>
+<script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=209301705863030";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
 
+<% if signed_in? %>
+    <%= render 'layouts/actions_header' %>
+<% end %>
 
-          <%= render 'layouts/footer'%>
-			</div>
+<div class="container">
+  <header>
+    <%= render 'layouts/header' %>
+    <%= render 'layouts/menu_intranet' %>
+  </header>
+  <div class="cuerpo">
 
 
+    <%= yield %>
 
-	</body>
+    <div class="lateral">
+      <%= render "layouts/sidebar/eventos" %>
+      <%= render "layouts/sidebar/comentado" %>
+      <%= render "layouts/sidebar/favoritos" %>
+    </div>
+  </div>
+  <%= render 'layouts/footer' %>
+</div>
 
-	<%= debug(params) if Rails.env.development? %>
+<%= debug(params) if Rails.env.development? %>
+
+
+</body>
+
 </html>

@@ -1,23 +1,35 @@
-header {height:240px; background:url('/assets/header_bg.png'); margin:0;}
+.header {height:240px; background:url('/assets/header_bg.png'); margin:0;}
 
-header .logo{
-  background:-webkit-gradient(linear, left top, left bottom, from(#F7D34C), to(#EBC848));
-  border-radius:5px;
-  overflow:hidden;
-  position:absolute;
-  top:-5px;
-  left: 80px;
-  width: 215px;
-  height:110px;
-  box-shadow:0px 1px 8px #333;
-  text-transform:uppercase;
+.header .logo{
+  padding: 10px 0 0 30px;
+  display:block;
+  line-height: 1;
 }
 
-header .imagen{ float:left; margin: 0;}
-header img {margin:0;}
-header .nombre {float:left; /*font-family: 'Droid Serif', serif;*/}
-header .nombre h1 {font-size:26px; font-weight:normal; margin-bottom:0;}
-header .nombre span { color:#444; }
+.header .logo .imagen{
+  float:left;
+  margin-right: 10px;
+}
+
+.header .logo .slogan{
+  float:left;
+  padding-top: 18px;
+  margin: 0;
+}
+
+.header .logo .slogan h3{
+  margin:0;
+  color:#222;
+  font-size: 18px;
+  text-shadow: 0px 1px 10px white;
+  margin-bottom: 3px;
+}
+
+.header .logo .slogan h4{
+  margin:0;
+  color:#666;
+  font-size:11px;
+}
 
 .acciones { height: 26px; background: #2d2d2d; border-bottom: 1px solid black; top: 0; font-size:12px; z-index:2;}
 .acciones ol { position:absolute; text-align: center; right: 0; margin:0;}
@@ -51,10 +63,7 @@ a.selected {
 }
 
 .sesion a{
-  position: absolute;
-  right:110px;
-  top:-5px;
-  font-size:13px;
+
 }
 
 .messagepop {
@@ -103,11 +112,20 @@ label {
   color: white;
   font-weight:bolder;
   box-shadow: 0px 1px 10px #333;
+  text-shadow: 0px 0px 2px #B49A37;
 
 }
 
 #contact a{
   text-decoration:none;
+
+}
+
+#contact{
+  position: absolute;
+  right:110px;
+  top:-5px;
+  font-size:13px;
 }
 
 #contact:hover{
@@ -124,20 +142,16 @@ label {
   left:500px;
 }
 
-/*.boton_entrar{
-	height:24px;
-	width:auto;
-	-webkit-box-shadow: 0 1px 0 #fff;
-	box-shadow: 0 1px 0 #fff;
+.signup{
+  text-align: center;
+  margin: 20px 0 0 -25px;
+  width: 210px;
+  background: #f7edac;
+  height: 25px;
+  padding-top: 3px;
 
-	white-space:nowrap;
-	color:white;
-	text-shadow: 0 -1px 0 #eee;
-	background-color:#ff9c01;
-	border-color: #ffb306;
-	background-image: -webkit-linear-gradient(#ffb136,#ff9c01);
-	background-image: -o-linear-gradient(#ffb136,#ff9c01);
-	cursor: pointer;
-	border-radius: 4px;
-	font-size:13px;
-}*/
+}
+
+.signup a{
+  color: #c18836;
+}

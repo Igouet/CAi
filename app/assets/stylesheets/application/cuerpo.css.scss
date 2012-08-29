@@ -141,6 +141,23 @@ footer a {
   width: 80px;
 }
 
+input[type="text"] {
+  color: green;
+  width:100px;
+  -webkit-transition-duration: 400ms;
+  -webkit-transition-property: width;
+  -webkit-transition-timing-function: ease;
+}
+
+
+input[type="text"]:focus {
+  color: green;
+  width:300px;
+  -webkit-transition-duration: 400ms;
+  -webkit-transition-property: width;
+  -webkit-transition-timing-function: ease;
+}
+
 
 
 
