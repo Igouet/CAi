@@ -24,6 +24,7 @@ class PostsController < ApplicationController
     @title = "Noticias"
     @submenu = "Noticias"
     @actual = "Editar"
+    @post = Post.find(params[:id])
   end
   
   def update

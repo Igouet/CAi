@@ -14,7 +14,8 @@ class Post < ActiveRecord::Base
     has_attached_file :avatar, 
                         :default_url => '/assets/avatars/default_post_picture_:style.png',
                         :url => '/system/:class/:attachment/:id/:style/:filename',
-                        :styles => { :grande => "590x250#",
+                        :styles => { :original => "700x2000>",
+                                    :grande => "590x250#",
                                      :destacado => "420x250#",
                                      :normal => "140x140#"}
     

@@ -1,0 +1,72 @@
+.contenido .noticias #slideshow{
+  padding:0px;
+  height: 161px;
+  width:440px;
+}
+
+#slides {
+  position: relative;
+  z-index: 100;
+  width: 440px;
+  height: 161px;
+}
+
+.slides_container {
+  display:none;
+  width: 440px;
+  height: 161px;
+  z-index:-1;
+}
+
+.slides_container img {
+  width: 440px;
+  height: 161px;
+  display: block;
+}
+
+#slides .prev {
+  margin-right: 5px;
+  float:left;
+}
+#slides .next {
+  margin-right: 5px;
+  float:left;
+}
+
+.pagination {
+  margin:-18px 5px 0;
+  float: right;
+  list-style: none;
+}
+
+
+.pagination li {
+  float: left;
+  margin: 0 1px;
+}
+
+.pagination li a {
+  display: block;
+  width: 13px;
+  height: 0;
+  padding-top: 13px;
+  background-image: url(/assets/slideshow/pagination.png);
+  background-position: 0 0;
+  float: left;
+  overflow: hidden;
+
+}
+
+a.next, a.prev {
+  text-decoration:none;
+}
+
+
+.pagination li.current a, .pagination li.current a:hover { background-position: 0 -13px }
+
+.pagination li a:hover { background-position: 0 -26px }
+
+#slides a:link, #slides a:visited { color: #333 }
+
+#slides a:hover, #slides a:active { color: #9e2020 }
+

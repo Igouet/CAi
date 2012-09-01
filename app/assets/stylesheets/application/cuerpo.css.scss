@@ -23,6 +23,12 @@ body {
 
 }
 
+.cuerpo .contenido{
+  margin-top: 2px;
+  float: left;
+  padding-bottom: 2px;
+}
+
 .cuerpo .borde_izquierda {
   position: relative;
   float: left;
@@ -142,7 +148,6 @@ footer a {
 }
 
 input[type="text"] {
-  color: green;
   width:100px;
   -webkit-transition-duration: 400ms;
   -webkit-transition-property: width;
@@ -151,8 +156,7 @@ input[type="text"] {
 
 
 input[type="text"]:focus {
-  color: green;
-  width:300px;
+  width:200px;
   -webkit-transition-duration: 400ms;
   -webkit-transition-property: width;
   -webkit-transition-timing-function: ease;

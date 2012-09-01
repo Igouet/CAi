@@ -1,0 +1,31 @@
+<div class = "contenido">
+  <div class ="izquierda">
+    <h1>Lista de galerías de foto</h1>
+
+    <table>
+      <tr>
+        <th>T&iacute;tulo</th>
+        <th>Descripci&oacute;n</th>
+        <th>Evento</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+
+      <% @albums.each do |album| %>
+          <tr>
+            <td><%= album.name %></td>
+            <td><%= album.descripcion %></td>
+            <td><%= album.evento_id %></td>
+            <td><%= link_to 'Ver', album %></td>
+            <td><%= link_to 'Editar', edit_album_path(album) %></td>
+            <td><%= link_to 'Eliminar', album, :confirm => '¿Est&aacute;s seguro?', :method => :delete %></td>
+          </tr>
+      <% end %>
+    </table>
+
+    <br />
+
+    <%= link_to 'Nueva galería', new_album_path %>
+  </div>
+</div>

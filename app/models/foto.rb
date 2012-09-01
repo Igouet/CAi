@@ -1,6 +1,6 @@
 class Foto < ActiveRecord::Base
 
-  attr_accessible :avatar
+  attr_accessible :avatar, :album_id, :descripcion, :name
 
   belongs_to :album
 
@@ -8,8 +8,10 @@ class Foto < ActiveRecord::Base
                     :default_url => '/assets/avatars/default_foto_picture_:style.png',
                     :url => '/system/:class/:attachment/:id/:style/:filename',
                     :styles => { :grande => "935x700#",
+                                 :izquierda => "850x570#",
                                  :slide => "430x245#",
-                                 :rectangulo => "430x161#",
+                                 :viewport => "",
+                                 :rectangulo => "440x161#",
                                  :miniatura => "144x161#"
                     }
 

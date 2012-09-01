@@ -1,2 +1,39 @@
-<h1>Ingenieros#new</h1>
-<p>Find me in app/views/ingenieros/new.html.erb</p>
+<div class="contenido">
+  <div class="izquierda">
+    <h1>Registrarse</h1>
+
+    <%= form_for @ingeniero, :html => {:multipart => true} do |f| %>
+
+        <%= render 'shared/error_messages', :object => f.object %>
+        <div class="field">
+          <%= f.label :name, "Nombre" %>
+          <br/>
+          <%= f.text_field :name %>
+        </div>
+        <div class="field">
+          <%= f.label :email %>
+          <br/>
+          <%= f.text_field :email %>
+        </div>
+        <div class="field">
+          <%= f.label :avatar, "Imágen de perfil (Opcional)" %>
+          <br/>
+          <%= f.file_field :avatar %>
+        </div>
+        <div class="field">
+          <%= f.label :password, "Contraseña" %>
+          <br/>
+          <%= f.password_field :password %>
+        </div>
+        <div class="field">
+          <%= f.label :password_confirmation, "Confirmar contraseña" %>
+          <br/>
+          <%= f.password_field :password_confirmation %>
+        </div>
+        <div class="actions">
+          <%= f.submit "Registrarse" %>
+        </div>
+
+    <% end %>
+  </div>
+</div>
