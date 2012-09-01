@@ -6,7 +6,7 @@
   <div class="viewport">
     <a href="#">
       <span class="dark-background"><%= a.name %></span>
-         <%= image_tag(foto.avatar.url(:rectangulo)) %>
+         <%= image_tag(foto.avatar.url(:viewport)) %>
      </a>
   </div>
 
@@ -22,7 +22,7 @@
             $(this).children('a').children('img').animate({ height: '161', left: '0', top: '0', width: '430'}, 100);
             $(this).children('a').children('span').fadeIn(200);
         }).mouseleave(function(e) {
-                    $(this).children('a').children('img').animate({ height: '181', left: '-28', top: '-10', width: '483'}, 100);
+                    $(this).children('a').children('img').animate({ height: '181', left: '-25', top: '-10', width: '483'}, 100);
                     $(this).children('a').children('span').fadeOut(200);
                 });
     });

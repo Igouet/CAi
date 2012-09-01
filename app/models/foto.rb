@@ -9,8 +9,7 @@ class Foto < ActiveRecord::Base
                     :url => '/system/:class/:attachment/:id/:style/:filename',
                     :styles => { :grande => "935x700#",
                                  :izquierda => "850x570#",
-                                 :slide => "430x245#",
-                                 :viewport => "",
+                                 :viewport => "483x181#",
                                  :rectangulo => "440x161#",
                                  :miniatura => "144x161#"
                     }
