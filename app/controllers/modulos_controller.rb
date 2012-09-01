@@ -10,7 +10,7 @@ class ModulosController < ApplicationController
     @actual = 'Inicio'
     @submenu = "Inicio"
     @noticias = Post.all(:order => "created_at DESC", :limit => 5)
-    @prueba = Foto.first
+    @slide = Foto.all(:limit => 4)
   end
   
   def noticias
