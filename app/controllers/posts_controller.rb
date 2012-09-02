@@ -10,6 +10,7 @@ class PostsController < ApplicationController
   
   def create
     @post = Post.new(params[:post])
+    @post.cantidad_comentarios = 0
     @post.ingeniero_id = current_ingeniero.id
     if @post.save
       flash[:success] =  "La noticia fue publicada."
@@ -29,7 +30,7 @@ class PostsController < ApplicationController
   
   def update
     @post = Post.find(params[:id])
-    if @post.update_attributes(params[:ingeniero])
+    if @post.update_attributes(params[:post])
       flash[:success] = "Noticia actualizada."
       redirect_to posts_path
     else

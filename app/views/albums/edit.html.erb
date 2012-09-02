@@ -12,6 +12,12 @@
         </div>
         <br/>
         <div class="field">
+          <%= f.label :autor, "Autor" %>
+          <br/>
+          <%= f.text_field :autor %>
+        </div>
+        <br/>
+        <div class="field">
           <%= f.label :evento_id %>
           <br/>
           <%= f.select("evento_id", Evento.all.collect { |e| [e.name, e.id] }, {:prompt => 'Seleccionar actividad'}) %>

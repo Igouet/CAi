@@ -1,2 +1,46 @@
-<h1>Impulso#edit</h1>
-<p>Find me in app/views/impulso/edit.html.erb</p>
+<div class="contenido">
+  <div class="izquierda">
+    <h1>Publicar noticia</h1>
+
+    <%= form_for @post, :html => {:multipart => true} do |f| %>
+
+        <%= render 'shared/error_messages', :object => f.object %>
+
+        <div class="field">
+          <%= f.label :titulo, "Título" %>
+          <br/>
+          <%= f.text_field :titulo %>
+        </div>
+        <div class="field">
+          <%= f.label :seccion_id %>
+          <br/>
+          <%= f.select("seccion_id", Seccion.all.collect { |s| [s.name, s.id] }, {:prompt => 'Seleccionar sección'}) %>
+        </div>
+        <div class="field">
+          <%= f.label :resumen %>
+          <br/>
+          <%= f.text_area :resumen, :rows => 6 %>
+        </div>
+        <div class="field">
+          <%= f.label :contenido %>
+          <br/>
+          <%= f.text_area :contenido %>
+        </div>
+        <div class="field">
+          <%= f.label :impulso_link, "Código Issue del Impulso" %>
+          <br/>
+          <%= f.text_area :impulso_link %>
+        </div>
+        <div class="field">
+          <%= f.label :avatar, "Imagen principal (en lo posible mayor a 590x250)" %>
+          <br/>
+          <%= f.file_field :avatar %>
+        </div>
+        <div class="actions">
+          <%= f.submit "Publicar" %>
+        </div>
+
+    <% end %>
+  </div>
+
+</div>

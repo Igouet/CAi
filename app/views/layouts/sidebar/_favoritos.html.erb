@@ -1,5 +1,8 @@
 <div id = "favoritos">
-	<img src = "/assets/favoritos/UC.png">
-	<img src = "/assets/favoritos/capuntes.png">
-	<img src = "/assets/favoritos/siding.png">
+  <% img = image_tag('/assets/favoritos/UC.png') %>
+  <%= link_to img, "http://www.uc.cl" %>
+  <% img = image_tag('/assets/favoritos/capuntes.png') %>
+  <%= link_to img, "http://apuntes.cai.cl" %>
+  <% img = image_tag('/assets/favoritos/siding.png') %>
+  <%= link_to img, "http://www.ing.puc.cl" %>
 </div>
