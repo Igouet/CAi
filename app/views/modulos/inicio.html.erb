@@ -24,12 +24,14 @@
                 <div class="row">
                   <div class="span12">
                     <div id="slides">
+                      <a href="/galeria">
                       <div class="slides_container">
                         <% @slide.each do |s| %>
                             <%= image_tag s.avatar.url(:rectangulo) %>
+
                         <% end %>
                       </div>
-
+                                   </a>
                     </div>
                   </div>
                 </div>

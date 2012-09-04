@@ -4,7 +4,7 @@
   <% @albums.each do |a| %>
       <% foto = a.fotos.first %>
   <div class="viewport">
-    <a href="#">
+    <a href=<%= "/albums/#{a.id}" %>  >
       <span class="dark-background"><%= a.name %><em>Fotógrafo: <%= a.autor %></em></span>
 
          <%= image_tag(foto.avatar.url(:viewport)) %>

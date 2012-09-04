@@ -1,2 +1,7 @@
-<h1>Albums#show</h1>
-<p>Find me in app/views/albums/show.html.erb</p>
+<div class="contenido">
+  <div class="galeria">
+     <% @fotos.each do |f| %>
+      <%= image_tag(f.avatar.url(:thumb)) %>
+  <% end %>
+  </div>
+</div>
