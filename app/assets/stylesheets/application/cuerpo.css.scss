@@ -27,6 +27,7 @@ body {
   margin-top: 2px;
   float: left;
   padding-bottom: 2px;
+  width: 900px;
 }
 
 .cuerpo .borde_izquierda {
@@ -68,15 +69,14 @@ footer a {
   border-radius: 10px;
 }
 
-.izquierda {
+.contenido .izquierda {
   float: left;
   width: 850px;
   overflow: hidden;
   background: white;
   min-height: 300px;
   padding: 10px;
-  margin-right: 10px;
-  margin-left: 20px;
+  margin: 0 10px 10px 20px;
   -webkit-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.1);
 }
 
