@@ -23,6 +23,7 @@ class IngenierosController < ApplicationController
   
   def create
     @ingeniero = Ingeniero.new(params[:ingeniero])
+    @ingeniero.permiso = 0
     if @ingeniero.save
       sign_in @ingeniero
       flash[:success] =  "¡Bienvenido al CAi!"
