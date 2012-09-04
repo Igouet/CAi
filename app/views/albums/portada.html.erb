@@ -5,7 +5,8 @@
       <% foto = a.fotos.first %>
   <div class="viewport">
     <a href="#">
-      <span class="dark-background"><%= a.name %></span>
+      <span class="dark-background"><%= a.name %><em>Fotógrafo: <%= a.autor %></em></span>
+
          <%= image_tag(foto.avatar.url(:viewport)) %>
      </a>
   </div>
