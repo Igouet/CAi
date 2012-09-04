@@ -1,4 +1,4 @@
-.header {height:240px; background:url('/assets/header_bg.png'); margin:0;}
+.header {height:240px; background:url('/assets/header_bg.jpg'); margin:0;}
 
 .header .logo{
   padding: 10px 0 0 30px;
@@ -19,16 +19,17 @@
 
 .header .logo .slogan h3{
   margin:0;
-  color:#222;
+  color:white;
   font-size: 18px;
-  text-shadow: 0px 1px 10px white;
+  text-shadow: 0px 1px 10px black;
   margin-bottom: 3px;
 }
 
 .header .logo .slogan h4{
   margin:0;
-  color:#666;
+  color:#ddd;
   font-size:11px;
+  text-shadow: 0px 1px 10px black;
 }
 
 .acciones { height: 26px; background: #2d2d2d; border-bottom: 1px solid black; top: 0; font-size:12px; z-index:2;}

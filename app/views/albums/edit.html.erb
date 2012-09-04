@@ -1,2 +1,39 @@
-<h1>Albums#edit</h1>
-<p>Find me in app/views/albums/edit.html.erb</p>
+<div class="contenido">
+  <div class="izquierda">
+    <h1>Nuevo álbum de fotos</h1>
+
+    <%= form_for @album, :html => {:multipart => true} do |f| %>
+
+        <%= render 'shared/error_messages', :object => f.object %>
+        <div class="field">
+          <%= f.label :name, "Nombre" %>
+          <br/>
+          <%= f.text_field :name %>
+        </div>
+        <br/>
+        <div class="field">
+          <%= f.label :autor, "Autor" %>
+          <br/>
+          <%= f.text_field :autor %>
+        </div>
+        <br/>
+        <div class="field">
+          <%= f.label :evento_id %>
+          <br/>
+          <%= f.select("evento_id", Evento.all.collect { |e| [e.name, e.id] }, {:prompt => 'Seleccionar actividad'}) %>
+        </div>
+        <br/>
+        <div class="field">
+          <%= f.label :descripcion, "Descripción" %>
+          <br/>
+          <%= f.text_area :descripcion %>
+        </div>
+        <br />
+
+        <div class="actions">
+          <%= f.submit "Crear" %>
+        </div>
+
+    <% end %>
+  </div>
+</div>

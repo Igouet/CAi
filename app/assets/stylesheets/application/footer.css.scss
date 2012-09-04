@@ -96,23 +96,42 @@ footer .contenido .cleft .lista .cleft
 {
 	float:left;
 	width: 160px;
-	padding: 0.5em 3em 0 10em;
+	padding: 0.5em 3em 0 6em;
 }
 
 footer .contenido .cleft .lista .cright
 {
 
-	padding: 1.3em 1em 2em 9em;
+	padding: 1.3em 1em 2em 6.5em;
 	float:left;
-	width: 400px;
+	width: 620px;
 }
 
 footer .contenido .lista .cright .col
 {
 	float: left;
+  margin-right: 6em;
 }
 
 footer .contenido .cleft .lista ul
 {
 	list-style: none;
+}
+
+/* Auspicios */
+
+footer .auspicios{
+  overflow: hidden;
+  border-top: 1px solid #EEE;
+  padding-left: 70px;
+}
+
+footer .auspicios ul{
+  list-style: none;
+}
+
+footer .auspicios ul li{
+  display:block;
+  float: left;
+  margin-right: 6%;
 }

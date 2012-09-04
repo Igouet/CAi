@@ -3,10 +3,10 @@
   <div id="menu_header">
     <ul>
       <% "Inicio,Noticias,Medios,Áreas,Servicios,Portales".split(",").each do |modulo| %>
-          <% if modulo == @title %>
-              <li class="actual"> <%= link_to modulo, "/modulos/#{modulo.downcase}" %></li>
+          <% if modulo.gsub(/[Á]/,'A') == @title %>
+              <li class="actual"> <%= link_to modulo, "/modulos/#{modulo.gsub(/[Á]/,'A').downcase}" %></li>
            <% else %>
-              <li> <%= link_to modulo, "/modulos/#{modulo.downcase}" %></li>
+              <li> <%= link_to modulo, "/modulos/#{modulo.gsub(/[Á]/,'A').downcase}" %></li>
           <% end %>
       <% end %>
       <% f = image_tag "fb.png" %>

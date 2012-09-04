@@ -10,6 +10,7 @@ class PostsController < ApplicationController
   
   def create
     @post = Post.new(params[:post])
+    @post.cantidad_comentarios = 0
     @post.ingeniero_id = current_ingeniero.id
     if @post.save
       flash[:success] =  "La noticia fue publicada."
@@ -24,11 +25,12 @@ class PostsController < ApplicationController
     @title = "Noticias"
     @submenu = "Noticias"
     @actual = "Editar"
+    @post = Post.find(params[:id])
   end
   
   def update
     @post = Post.find(params[:id])
-    if @post.update_attributes(params[:ingeniero])
+    if @post.update_attributes(params[:post])
       flash[:success] = "Noticia actualizada."
       redirect_to posts_path
     else
@@ -74,6 +76,12 @@ class PostsController < ApplicationController
     Post.find(params[:id]).destroy
     flash[:success] = "Noticia eliminada."
     redirect_to posts_path
+  end
+
+  def seccion
+    @noticias = Post.where(["seccion_id = ?", params[:id]]).limit(6)
+    @title = "Areas"
+    @submenu = "Areas"
   end
   
   private

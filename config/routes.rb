@@ -23,6 +23,7 @@ CAi2012::Application.routes.draw do
   match "/vocalia/:id/noticias" => "vocalia#noticias"
   match "/vocalia/:id/nosotros" => "vocalia#nosotros"
   match '/vocalias', :to => 'vocalia#index'
+  match '/post/seccion/:id' => 'posts#seccion'
   resources :vocalia
 
   resources :ingenieros
@@ -30,11 +31,13 @@ CAi2012::Application.routes.draw do
   resources :sessions, :only => [:new, :create, :destroy]
   
   resources :equipos
+
+  resources :fotos
   
   match '/posts/indice', :controller => 'posts', :action => 'indice'
   
   match '/modulos/inicio', :controller => 'modulos', :action => 'inicio'
-  match '/galeria', :controller => 'albums', :action => 'index'
+  match '/galeria', :controller => 'albums', :action => 'portada'
   get "posts/impulso"
   get "posts/caitv"
   resources :posts

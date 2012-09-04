@@ -1,2 +1,31 @@
-<h1>Videos#index</h1>
-<p>Find me in app/views/videos/index.html.erb</p>
+<div class = "contenido">
+  <div class ="izquierda">
+    <h1>Lista de Videos</h1>
+
+    <table>
+      <tr>
+        <th>T&iacute;tulo</th>
+        <th>Resumen</th>
+        <th>Secci&oacute;n</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+
+      <% @posts.each do |post| %>
+          <tr>
+            <td><%= post.titulo %></td>
+            <td><%= post.resumen %></td>
+            <td><%= post.seccion_id %></td>
+            <td><%= link_to 'Ver', post %></td>
+            <td><%= link_to 'Editar', edit_post_path(post) %></td>
+            <td><%= link_to 'Eliminar', post, :confirm => '¿Est&aacute;s seguro?', :method => :delete %></td>
+          </tr>
+      <% end %>
+    </table>
+
+    <br />
+
+    <%= link_to 'Nuevo video', '/videos/new' %>
+  </div>
+</div>

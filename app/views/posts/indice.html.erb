@@ -5,7 +5,7 @@
 			<% @posts.each do |post| %>
 				<tr>
 					<td><%= post.titulo %></td>
-					<td><%= post.seccion_id %> </td>
+					<td><%= post.seccion.name unless post.seccion.nil? %> </td>
 					<td><%= link_to 'Ver noticia', post%>
 				</tr>
 			<% end %>

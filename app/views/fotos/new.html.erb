@@ -1,2 +1,43 @@
-<h1>Fotos#new</h1>
-<p>Find me in app/views/fotos/new.html.erb</p>
+<div class="contenido">
+  <div class="izquierda">
+    <h1>Subir foto</h1>
+
+    <%= form_for @foto, :html => {:multipart => true} do |f| %>
+
+        <%= render 'shared/error_messages', :object => f.object %>
+
+        <div class="field">
+          <%= f.label :name, "Nombre" %>
+          <br/>
+          <%= f.text_field :name %>
+        </div>
+        <br/>
+
+        <div class="field">
+          <%= f.label :album_id %>
+          <br/>
+          <%= f.select("album_id", Album.all.collect { |a| [a.name, a.id] }, {:prompt => 'Seleccionar álbum'}) %>
+        </div>
+        <br/>
+
+        <div class="field">
+          <%= f.label :descripcion, "Descripción" %>
+          <br/>
+          <%= f.text_area :descripcion %>
+        </div>
+        <br/>
+
+        <div class="field">
+          <%= f.label :avatar, "Foto" %>
+          <br/>
+          <%= f.file_field :avatar %>
+        </div>
+        <br/>
+
+        <div class="actions">
+          <%= f.submit "Subir" %>
+        </div>
+
+    <% end %>
+  </div>
+</div>

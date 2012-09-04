@@ -1,0 +1,31 @@
+<div class = "contenido">
+  <div class ="izquierda">
+    <h1>Lista de fotos</h1>
+
+    <table>
+      <tr>
+        <th>T&iacute;tulo</th>
+        <th>Descripci&oacute;n</th>
+        <th>Album</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+
+      <% @fotos.each do |foto| %>
+          <tr>
+            <td><%= foto.name %></td>
+            <td><%= foto.descripcion %></td>
+            <td><%= foto.album_id %></td>
+            <td><%= link_to 'Ver', foto %></td>
+            <td><%= link_to 'Editar', edit_foto_path(foto) %></td>
+            <td><%= link_to 'Eliminar', foto, :confirm => '¿Est&aacute;s seguro?', :method => :delete %></td>
+          </tr>
+      <% end %>
+    </table>
+
+    <br />
+
+    <%= link_to 'Subir fotografía', new_foto_path %>
+  </div>
+</div>

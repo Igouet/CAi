@@ -9,7 +9,8 @@ class ModulosController < ApplicationController
     @title = 'Inicio'
     @actual = 'Inicio'
     @submenu = "Inicio"
-    @noticias = Post.all(:order => "created_at DESC", :limit => 4)
+    @noticias = Post.all(:order => "created_at DESC", :limit => 5)
+    @slide = Foto.all(:limit => 4)
   end
   
   def noticias
@@ -52,7 +53,7 @@ class ModulosController < ApplicationController
   def areas
     @title = "Areas"
     @submenu = "Areas"
-    @categories = Category.all
+    @noticias = Post.where({:seccion_id => [1, 2, 3, 4, 5]}).order("created_at DESC").limit(6)
   end
 
   def portales
