@@ -53,7 +53,7 @@ class ModulosController < ApplicationController
   def areas
     @title = "Areas"
     @submenu = "Areas"
-    @categories = Category.all
+
   end
 
   def portales

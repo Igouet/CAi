@@ -77,6 +77,12 @@ class PostsController < ApplicationController
     flash[:success] = "Noticia eliminada."
     redirect_to posts_path
   end
+
+  def seccion
+    @posts = Post.where(["seccion_id = ?", params[:id]]).limit(6)
+    @title = "Areas"
+    @submenu = "Areas"
+  end
   
   private
   

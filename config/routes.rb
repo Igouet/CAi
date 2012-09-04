@@ -23,6 +23,7 @@ CAi2012::Application.routes.draw do
   match "/vocalia/:id/noticias" => "vocalia#noticias"
   match "/vocalia/:id/nosotros" => "vocalia#nosotros"
   match '/vocalias', :to => 'vocalia#index'
+  match '/post/seccion/:id' => 'posts#seccion'
   resources :vocalia
 
   resources :ingenieros
