@@ -53,7 +53,7 @@ class ModulosController < ApplicationController
   def areas
     @title = "Areas"
     @submenu = "Areas"
-
+    @noticias = Post.where({:seccion_id => [1, 2, 3, 4, 5]}).order("created_at DESC").limit(6)
   end
 
   def portales

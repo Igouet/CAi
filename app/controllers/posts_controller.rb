@@ -79,7 +79,7 @@ class PostsController < ApplicationController
   end
 
   def seccion
-    @posts = Post.where(["seccion_id = ?", params[:id]]).limit(6)
+    @noticias = Post.where(["seccion_id = ?", params[:id]]).limit(6)
     @title = "Areas"
     @submenu = "Areas"
   end
