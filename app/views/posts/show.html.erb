@@ -13,7 +13,7 @@
       <div class="fb-like" data-href="http://2012.cai.cl/posts/<%= "#{@post.id}" %>" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
       <h2><%= @post.titulo %> </h2>
 
-      <p><%= @post.contenido %></p>
+      <%= @post.contenido.html_safe %>
 
 
     </div>

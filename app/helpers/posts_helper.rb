@@ -4,7 +4,7 @@ module PostsHelper
 
   def actualizar_c_comentarios(numero)
 
-    uri = URI("https://graph.facebook.com/?ids=http://cai2012.heroku.com/posts/#{numero}")
+    uri = URI("https://graph.facebook.com/?ids=http://2012.cai.cl/posts/#{numero}")
     http = Net::HTTP.new(uri.host, uri.port)
     http.use_ssl = true
     http.verify_mode = OpenSSL::SSL::VERIFY_NONE
