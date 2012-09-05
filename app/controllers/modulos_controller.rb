@@ -57,7 +57,7 @@ class ModulosController < ApplicationController
   end
 
   def portales
-
+    @title = "Portales"
   end
 
   def servicios
