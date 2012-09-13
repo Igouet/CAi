@@ -1,5 +1,12 @@
 <div class="contenido">
-              <div class="izquierda">
-                <%= image_tag @foto.avatar.url(:izquierda) %>
-              </div>
-        </div>
+  <div class="izquierda">
+    <%= image_tag @foto.avatar.url(:izquierda) %>
+  </div>
+
+  <div class="columna">
+    <div class="post">
+      <div class="fb-comments" data-href="http://2012.cai.cl/fotos/<%= "#{@foto.id}" %>" data-num-posts="5" data-width="590"></div>
+    </div>
+  </div>
+  <div class="meta-post"></div>
+</div>
