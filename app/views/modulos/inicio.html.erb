@@ -42,6 +42,7 @@
         <% end %>
 
         <% for i in 2..4 %>
+
             <div class="noticia">
               <% img = image_tag @noticias[i].avatar.url(:normal) %>
               <%= link_to img, @noticias[i] %>
