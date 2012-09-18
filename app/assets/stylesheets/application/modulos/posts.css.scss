@@ -30,6 +30,14 @@
   margin:0;
 }
 
+.meta-post ul{
+  list-style: none;
+}
+
+.meta-post h3{
+  margin: 0 0 5px 5px;
+}
+
 .columna {
   width:620px;
   float:left;
@@ -42,3 +50,20 @@
   margin:5px;
 }
 
+table{
+  border-spacing: 0px;
+  font-size: 13px;
+  text-align:center;
+}
+
+table td{
+  border: 1px solid #666;
+  padding:2px;
+  border-spacing:0px;
+}
+
+.post .tabla{
+  text-align: center;
+  color: #333;
+  margin-left:45px;
+}
