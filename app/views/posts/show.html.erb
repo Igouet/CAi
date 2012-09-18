@@ -4,7 +4,7 @@
       <%= render 'layouts/error_flash' %>
       <% if !@post.impulso_link.nil?  && @post.impulso_link.length > 10 %>
           <%= @post.impulso_link.html_safe %>
-      <% elsif !@post.youtube_link.nil? %>
+      <% elsif !@post.youtube_link.nil? && !@post.youtube_link.blank? %>
           <iframe width="590" height="315" src="http://www.youtube.com/embed/<%= @post.youtube_link %>" frameborder="0" allowfullscreen></iframe>
       <% else %>
           <%= image_tag @post.avatar.url(:grande) %>
@@ -13,7 +13,7 @@
       <div class="fb-like" data-href="http://2012.cai.cl/posts/<%= "#{@post.id}" %>" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false"></div>
       <h2><%= @post.titulo %> </h2>
 
-      <%= @post.contenido.html_safe %>
+      <p><%= @post.contenido.gsub(/\n/, '</p><p>').html_safe %>         </p>
 
 
     </div>
